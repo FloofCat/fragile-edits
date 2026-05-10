@@ -8,7 +8,7 @@ Knowledge Editing (KE) has emerged as a frontier for updating specific facts in 
 
 ![framework](./assets/framework.png)
 
-✨ We also provide our mechanistic analysis experiments available in `./analysis/`.
+✨ We also provide our mechanistic analysis experiments in `./analysis/`.
 
 ---
 ## 1. Installation
