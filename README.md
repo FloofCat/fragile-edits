@@ -27,12 +27,12 @@ python3 ./attacks/[blind|context_guided|template-free]/main.py
 Our implementation is heavily inspired by the [nanoGCG](https://github.com/GraySwanAI/nanoGCG) framework. All edited models were made by the [EasyEdit](https://github.com/zjunlp/EasyEdit) framework. Please review all hyperparameters set by the library.
 
 ### 2.1. Dataset Format
-We use the CounterFact dataset for all experiments, with a lightly formatted structure described in Appendix C. Each sample contains:
+We use the CounterFact dataset for all experiments, JSON format, with all details described in Appendix C. Each sample contains the following fields in JSON:
 
 - `paraphrases`: List of paraphrased prompts expected to recover the old_edit answer in the pre-edit model.
 - `old_edit`: Original factual knowledge before editing.
 - `new_edit`: Updated edited knowledge.
-subject: Main entity or subject being targeted
+- `subject`: Main entity or subject being targeted
 
 ## 3. License
 Our source code is under the GNU General Public License v3.0.
