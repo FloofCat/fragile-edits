@@ -35,7 +35,7 @@ We use the CounterFact dataset for all experiments, JSON format, with all detail
 - `subject`: Main entity or subject being targeted
 
 ## 3. License
-Our source code is under the GNU General Public License v3.0.
+Our source code is under the CC BY-NC-SA 4.0.
 
 ## 4. Authors
 Authors and contributors would be added here after acceptance.
