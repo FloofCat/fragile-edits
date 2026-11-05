@@ -2,13 +2,14 @@
 
 # Exposing the Illusion of Erasure in Knowledge Editing for LLMs
 
-This repo is an official implementation for the paper *Exposing the Illusion of Erasure in Knowledge Editing for LLMs* (under review). 
+This repo is an official implementation for the paper *Exposing the Illusion of Erasure in Knowledge Editing for LLMs* (accepted to NeurIPS '26). 
 
 Knowledge Editing (KE) has emerged as a frontier for updating specific facts in LLMs without costly retraining, but its reliability and underlying mechanisms remain poorly understood. In this work, we examine KE from an adversarial elicitation perspective, revealing that edited knowledge is often not fully erased and continues to surface, with consistent failures observed across diverse model architectures. To explain this behavior, we conduct a mechanistic analysis of popular KE methods. We show that low-rank updates do not overwrite existing knowledge but instead redistribute it within the model's representation space. Furthermore, we find that these methods act as targeted suppression mechanisms that reduce the likelihood of expressing original facts, rather than removing them from the model. Analysis of the loss landscape reveals that edited knowledge lies in narrow, anisotropic regions that are highly sensitive to perturbations, making them highly vulnerable to indirect prompting and adversarial attacks. By exposing these profound architectural vulnerabilities, our work proves that KE algorithms are inherently bypassable and motivates a fundamental reevaluation of how we deploy post-hoc updates in several LLM applications.
 
 ![framework](./assets/framework.png)
 
 ✨ We also provide our mechanistic analysis experiments in `./analysis/`.
+✨ Accepted to NeurIPS '26!
 
 ---
 ## 1. Installation
@@ -43,3 +44,6 @@ Our source code is under the CC BY-NC-SA 4.0.
 
 ## 5. Ethical Statement
 This work studies the reliability and fragilities of knowledge editing in LLMs. Our experiments are intended solely for scientific analysis, robustness evaluation, and improving the KE methods. We do not encourage the misuse of these techniques for malicious purposes.
+
+## 6. Responsible Use Disclaimer
+This work aims to improve the understanding of the reliability and security limitations of KE methods in LLMs. While the adversarial elicitation techniques explored in this study could potentially be misused to recover information that model developers have attempted to suppress, our investigation is intended to support the development of more robust and verifiable KE mechanisms. We emphasize that KE should not be treated as a reliable means of permanently removing sensitive or harmful information from a model. We encourage researchers and practitioners to use our findings for authorized security evaluations, robustness testing, and the development of stronger safeguards, rather than for circumventing deployed safety mechanisms or extracting sensitive information.
